@@ -1,0 +1,249 @@
+/*Start Variables */
+:root{
+--MyfntCr:hsl(0, 0%, 100%);
+}
+/*End Variables*/
+
+/*Start Global Rules*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Hanken Grotesk";
+}
+/*End Global Rules*/
+/*Start Project*/
+
+.project .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    box-shadow: 15px 10px 20px rgb(0, 0, 0, 0.1);
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* android screens */
+@media (min-width:480px){
+    .container{
+        border-radius: 0;
+        width: 468px;
+        
+    }
+
+    .container .result{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+/* small screens */
+@media (min-width:768px){
+    .container{
+        border-radius: 0;
+        width: 710px;
+        
+    }
+
+    .container .result{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+/* medium screens */
+@media (min-width:992px){
+    .container{
+        width: 680px;
+    }
+}
+
+/* large screens */
+@media (min-width:1200px){
+    .container{
+        width: 678px;
+        
+    }
+}
+
+
+.container .result {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: var(--MyfntCr);
+    /* border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
+    border-radius: 25px;
+    
+}
+
+
+.container .result p{
+    margin: 0 40px 0 40px;
+    color: hsl(247, 100%, 89%);
+}
+
+.container .result .circle{
+    width: 175px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+} 
+
+.container .result .circle span:last-child{
+    color: hsl(245, 87%, 70%);
+}
+
+.container .result .st, .container .summary h3{
+    margin: 0 0 30px 0;
+}
+
+.container .result .st{
+    font-size: 20px;
+    color: hsl(247, 100%, 89%);
+}
+
+.container .result h3{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.container .result .circle .cir{
+    font-size:75px;
+    font-weight: 800;
+}
+
+.container .summary{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .summary h3{
+    color: hsl(224, 30%, 27%);
+}
+
+.container .summary .num{
+    color: hsl(224, 30%, 27%);
+    margin-right: 10px;
+}
+
+.container .summary .onehund{
+    color: hsl(227, 10%, 61%);
+}
+
+.summary img{
+    margin-right: 15px;
+}
+
+.container .summary .reaction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    color: hsl(0, 100%, 67%);
+    background-color: hsl(6, 100%, 98%);
+}
+
+.container .summary .reaction > div{
+    display: flex;
+    align-items: center;
+}
+
+.container .summary .memory{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    color: hsl(39, 100%, 56%);
+    background-color: hsl(42, 100%, 97%);
+}
+
+.container .summary .memory > div{
+    display: flex;
+    align-items: center;
+}
+
+
+.container .summary .verbal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    color: hsl(166, 100%, 37%);
+    background-color: hsl(180, 44%, 96%);
+}
+
+.container .summary .verbal > div{
+    display: flex;
+    align-items: center;
+}
+
+
+.container .summary .visual{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    color: hsl(234, 85%, 45%);
+    background-color: hsl(240, 71%, 97%);
+}
+
+.container .summary .visual > div{
+    display: flex;
+    align-items: center;
+}
+
+
+.container .button{
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 0;
+    border-radius: 50px;
+}
+
+.container .button:hover{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
+}
+
+/*End Prject*/
